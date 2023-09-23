@@ -34,7 +34,7 @@ console.log(booleanIsLoggedIn);
 // "" =>  -> false
 // "chwiufhw" => true
 
-let someNumber = 33
+let someNumber = NaN
 
 let stringNumber = String(someNumber)
 console.log(typeof stringNumber);
