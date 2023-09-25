@@ -62,3 +62,6 @@ let userTwo = userOne
 userTwo.email = "abhishekpandit986@google.com"
 console.log(userOne);
 console.log(userTwo);
+
+// Shallow Copy stores the references of objects to the original memory address
+// Deep copy stores copies of the object's value
