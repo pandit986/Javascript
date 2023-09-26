@@ -1,7 +1,7 @@
 const accountId = 9866888
 let accountEmail = "abhishekpandit986@gmail.com"
 var accountPassword = "1234567"
-accountCity = "Jaipur" // Not good Pratice //global scope
+accountCity = "Jaipur" // Not good Pratice // global scope
 let accountState;
 // accountId = 4  // not allowed 
 // prefer not to use var 
