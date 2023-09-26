@@ -26,7 +26,7 @@ const shoppingCart = [
   },
   {
     itemName: "DataScience course",
-    price: "1999",
+    price: " 1999",
   },
 ];
 
