@@ -8,6 +8,8 @@ console.log(`Hello my name is ${name} and my repo count is {repoCount}`); //Stri
 const gameName = new String("Abhishek Pandit")
 //object craion of String calling a constructor
 
+let a = "sh"
+console.log(typeof a);
 console.log(gameName);
 console.log(gameName.__proto__);
 
