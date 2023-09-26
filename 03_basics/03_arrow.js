@@ -26,7 +26,7 @@ console.log(this); // empty object
 
 const chai = () => {
   let username = "Abhishek";
-  //   console.log(this.username); // undefined
+    console.log(this.username); // undefined
   console.log(this); // empty Object
 };
 
