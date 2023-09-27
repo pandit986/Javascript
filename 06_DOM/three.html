@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: rgb(0, 0, 0); color: white">
+    <div class="parent"></div>
+  </body>
+  <script>
+    const div = document.createElement("div");
+
+    div.className = "main";
+    div.id = Math.floor(Math.random() * 10 + 1);
+    div.setAttribute("title", "Abhishek Pandit");
+    div.style.backgroundColor = "green";
+    div.style.padding = "10px";
+    // div.innerText = "Abhishek Pandit"; heavy operation first bring refference and then override
+    const addText = document.createTextNode("chai aur code ");
+    div.appendChild(addText);
+    console.log(div);
+
+    const parent = document.querySelector(".parent");
+    parent.appendChild(div);
+  </script>
+</html>
