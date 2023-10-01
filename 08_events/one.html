@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>htnml Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // javascript is secequential run
+    //attachEvent()
+    //jQuery
+
+    // document.getElementById("owl").onclick = ()=>{alert("owl clicked")} // less feature
+
+    //type, timestamp , defaultPrevented,
+    //target, toElement , srcElement , currentTarget
+    //clientX , clientY , screenX , screenY
+    // altkey , ctrlkey , shiftkey , keyCode
+
+    document.getElementById("images").addEventListener(
+      "click",
+      (e) => {
+        // console.log(e.timeStamp);
+        // console.log();
+        console.log("Click Inside the UL");
+      },
+      false
+    );
+
+    document.getElementById("owl").addEventListener(
+      "click",
+      (e) => {
+        // console.log(e.timeStamp);
+        // console.log();
+        console.log("owl Clicked");
+        e.stopPropagation();
+      },
+      false
+    );
+    // false or True // Why?
+    // Event propogation Bubbling Up : mean Nicha Sa Upar Jata Hai
+    //First I CLick in Inner Element the UL
+
+    //Capture Mode : it Goes Top To Bottom
+    //Make Third Parameter True
+
+    //if you have to stop Bubbling Up Down To Up
+    // e.stopPropagation()
+
+    //prevent the url
+    document.getElementById("google").addEventListener(
+      "click",
+      (e) => {
+        console.log("google Clicked");
+        e.preventDefault();
+        //I DONT WANT TO PRAPOGATION
+        //also we say bubbling
+        // e.stopPropagation();
+      },
+      false
+    );
+
+    //true false Event Propogation
+    document.querySelector("#images").addEventListener("click", (e) => {
+      console.log(e);
+      console.log(e.target);
+      console.log(e.target.parentNode);
+      if (e.target.tagName === "IMG") {
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+        // removeIt.parentNode.removeChild(removIt);
+      }
+    });
+  </script>
+</html>
