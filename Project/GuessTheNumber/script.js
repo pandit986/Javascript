@@ -59,7 +59,7 @@ const displayGuess = (guess) => {
   userInput.value = "";
   guessesSlot.innerHTML = `${prevGuess}`;
   numberGuess++;
-  remaining.innerHTML = `${11 - numberGuess}`;
+  remaining.innerHTML = `${10 - numberGuess}`;
 };
 
 const displayMessage = (message) => {
