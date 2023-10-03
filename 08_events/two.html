@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    //give me two second then i will execute
+    setTimeout(() => {
+      console.log("Abhishek Pandit");
+    }, 2000);
+
+    //setInterval give me inteval i will execute
+
+    const changeText = () => {
+      document.querySelector("h1").innerHTML = "BEST JS SERIES";
+    };
+
+    const changeMe = setTimeout(changeText, 2000);
+    //can yo stop setTimeout before
+
+    //i will do on click on buttoon
+    document.querySelector("#stop").addEventListener("click", () => {
+     console.log("go baby go");
+      clearTimeout(changeMe);
+    });
+  </script>
+</html>
