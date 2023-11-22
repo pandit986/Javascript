@@ -13,11 +13,25 @@ const user = {
   increment: function () {
     console.log(this.age);
   },
+  address: {
+    flat: 404,
+    plot: 39,
+    location: "mumbai",
+  },
 };
-let clone = JSON.parse(JSON.stringify(user));
+// let clone = JSON.parse(JSON.stringify(user));
 
-console.log(clone);
-console.log(user.increment());
+// console.log(clone);
+// console.log(user.increment());
+//it has one con that not able to clone the function
 
+//second method
+// let clone = Object.assign({}, user); // nested problem is not solve
+// clone.address.location = "india";
+// console.log(clone);
+// console.log(user);
 
-//it has one con that not able to clone the function 
+//third method 
+let clone = cloneDeep(user)
+console.log(clone)
+
