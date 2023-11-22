@@ -35,3 +35,7 @@ const user = {
 let clone = cloneDeep(user)
 console.log(clone)
 
+//using spread operate
+
+let clone1 = {...clone}
+
